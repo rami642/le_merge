@@ -5,6 +5,6 @@
 # Version : 0.0.1
 ################################################
 #Printing time before and after sleep
-date
-sleep 60
-date
+date  "+%H:%M:%S"
+sleep 120
+date  "+%H:%M:%S"
