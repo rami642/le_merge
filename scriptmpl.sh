@@ -4,7 +4,7 @@
 # created by : rami642
 # purpose: template generation for script
 # date       : 30.12.18
-# version    : 0.1.1
+# version    : 0.2.2
 ###############################################
 
 #Vars
@@ -12,7 +12,7 @@
 shabeng="/usr/bin/env bash"
 script_name="$1"
 extension="sh"
-Hash="#"
+Comment="#"
 Date="Date: $(date +%d/%m/%y)"
 Ver="Version : 0.0.0"
 Time="2"
@@ -58,10 +58,10 @@ printf "%s \n" $line
 #this is the template of the script
 printf "%s \n" "#!$shabeng" > "$script_name"
 printf "%s \n" $line >> "$script_name"
-printf "%s \n" "$Hash $Auth" >> "$script_name"
-printf "%s \n" "$Hash $Purp" >> "$script_name"
-printf "%s \n" "$Hash $Date" >> "$script_name"
-printf "%s \n" "$Hash $Ver" >> "$script_name"
+printf "%s \n" "$Comment $Auth" >> "$script_name"
+printf "%s \n" "$Comment $Purp" >> "$script_name"
+printf "%s \n" "$Comment $Date" >> "$script_name"
+printf "%s \n" "$Comment $Ver" >> "$script_name"
 printf "%s \n" $line >> "$script_name"
 
 #deley again
@@ -83,5 +83,5 @@ printf "%s \n" $line
 
 	sleep $Time
 
-#premissions and name change
+#premissions and actions
 chmod +x ./scriptmpl.sh ; vim $script_name
