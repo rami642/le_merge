@@ -28,12 +28,12 @@ msg_name="Script Name : $1"
 
 ##############################################################################
 #Test Functions
-if [ -z $script_name ];then	
+if [ -z $script_name ];then
 	echo "No File Name"
 	exit 1
 fi
 
-if [ -e $script_name ];then 	
+if [ -e $script_name ];then
 	echo "File Exists"
 	exit 0
 fi
