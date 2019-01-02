@@ -10,35 +10,35 @@
 #Vars
 #conf vars
 shabeng="/usr/bin/env bash"
-script_name="$1"
-extension="sh"
 Comment="#"
 Date="Date: $(date +%d/%m/%y)"
 Ver="Version : 0.0.0"
 Time="2"
 Purp="Purpose: "
-Auth="Created By : "
+Auth="Created By : Rami642 "
 line="#######################################"
 
-#msg vars
-msg_start="Started!"
-msg_end="FIN"
-msg_create="Generating Script Template"
-msg_name="Script Name : $1"
-
 ##############################################################################
+
+read -p "Please enter script name: " script_name
+
+#msg vars
+ msg_start="Started!"
+ msg_end="Script Ready, Opening $script_name"
+ msg_create="Generating Script Template"
+ msg_name="Script Name : $script_name"
+
 #Test Functions
-if [ -z $script_name ];then	
+if [ -z $script_name ];then
 	echo "No File Name"
 	exit 1
 fi
 
-if [ -e $script_name ];then 	
+if [ -e $script_name ];then
 	echo "File Exists"
 	exit 0
 fi
 ##############################################################################
-
 #This part is a msg that the template starting
 
 printf "%s \n" $line
