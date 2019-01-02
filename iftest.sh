@@ -1,9 +1,9 @@
-#!/usr/bin/env bash 
-####################################### 
-# Created By :Rami642  
+#!/usr/bin/env bash
+#######################################
+# Created By :Rami642
 # Purpose:  Learning IF
-# Date: 02/01/19 
-# Version : 0.0.1 
+# Date: 02/01/19
+# Version : 0.0.1
 #######################################
 if [ -z $1 ];then
 	echo "****rental Unknow****"
